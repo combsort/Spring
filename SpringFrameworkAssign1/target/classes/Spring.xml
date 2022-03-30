@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/util
+   		   http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="Phone" class="org.genspark.Phone" >
+        <property name="mob" value="123-456-7890" />
+    </bean>
+
+    <bean id="Address" class="org.genspark.Address">
+        <constructor-arg index="0" value="Provo" />
+        <constructor-arg index="1" value="UT" />
+        <constructor-arg index="2" value="USA" />
+        <constructor-arg index="3" value="97809" />
+    </bean>
+
+
+
+    <util:list id="phLi" list-class="java.util.LinkedList">
+        <bean id="ph1" class="org.genspark.Phone" >
+            <property name="mob" value="111-111-1111" />
+        </bean>
+        <bean id="ph2" class="org.genspark.Phone" >
+            <property name="mob" value="222-222-2222" />
+        </bean>
+        <bean id="ph3" class="org.genspark.Phone" >
+            <property name="mob" value="333-333-3333" />
+        </bean>
+    </util:list>
+
+    <bean id="Student" class="org.genspark.Student">
+        <property name="id" value="12345"/>
+        <property name="name" value="John Smiht"/>
+        <property name="add" ref="Address" />
+        <property name="ph" ref="phLi" />
+
+    </bean>
+
+</beans>
