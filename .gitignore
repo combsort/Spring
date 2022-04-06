@@ -18,3 +18,5 @@ SpringBootAssign1/target/classes/com/genspark/SpringBootAssign1/Service/Employee
 SpringBootAssign1/target/classes/com/genspark/SpringBootAssign1/SpringBootAssign1Application.class
 
 SpringBootAssign1/target/test-classes/com/genspark/SpringBootAssign1/SpringBootDemoAppApplicationTests.class
+
+*.class
