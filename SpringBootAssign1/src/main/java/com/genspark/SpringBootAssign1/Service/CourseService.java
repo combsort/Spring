@@ -10,6 +10,6 @@ public interface CourseService {
     Course getByCourseId(int id);
     Course addCourse(Course course);
     Course updateCourse(Course course);
-    Course deleteCourse(int courseId);
+    String deleteCourse(int courseId);
 
 }

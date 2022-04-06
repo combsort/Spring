@@ -1,7 +1,17 @@
 package com.genspark.SpringBootAssign1.Entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tbl_courses")
 public class Course {
 
+
+    @Id
+    @Column(name="c_id")
     private int courseId;
     private String title;
     private String instructor;
