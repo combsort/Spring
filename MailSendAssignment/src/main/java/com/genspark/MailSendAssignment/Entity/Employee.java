@@ -1,15 +1,13 @@
 package com.genspark.MailSendAssignment.Entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="tbl_employees")
 public class Employee {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="e_id")
     private int employeeId;
     private String name;

@@ -1,9 +1,6 @@
 package com.genspark.MailSendAssignment.Entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="tbl_courses")
@@ -11,6 +8,7 @@ public class Course {
 
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="c_id")
     private int courseId;
     private String title;
